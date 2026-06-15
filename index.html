@@ -1527,7 +1527,8 @@ document.getElementById('mf').addEventListener('submit', function(e) {
     message: this.querySelector('[name="message"]').value
   };
 
-  fetch('https://script.google.com/macros/s/AKfycbwWW235amOi0mpglkAVQrsTTgZs6cNlft4muY7uS71DzeNcXaGe_HXuO_DXCqoihUuk1Q/exec', {
+  const CONTACT_FORM_URL = 'https://script.google.com/macros/s/AKfycbwWW235amOi0mpglkAVQrsTTgZs6cNlft4muY7uS71DzeNcXaGe_HXuO_DXCqoihUuk1Q/exec'; // ← שנה כאן את הכתובת
+  fetch(CONTACT_FORM_URL, {
     method: 'POST',
     mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
